@@ -1,0 +1,1261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>user</spirit:library>
+  <spirit:name>ADC_controller</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>S00_AXI</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm_rtl" spirit:version="1.0"/>
+      <spirit:slave>
+        <spirit:memoryMapRef spirit:memoryMapRef="S00_AXI"/>
+      </spirit:slave>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWADDR</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_awaddr</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWPROT</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_awprot</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_awvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_awready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_wdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WSTRB</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_wstrb</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_wvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_wready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BRESP</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_bresp</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_bvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_bready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARADDR</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_araddr</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARPROT</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_arprot</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_arvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_arready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_rdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RRESP</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_rresp</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_rvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_rready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>WIZ_DATA_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S00_AXI.WIZ_DATA_WIDTH" spirit:choiceRef="choice_list_6fc15197">32</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>WIZ_NUM_REG</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S00_AXI.WIZ_NUM_REG" spirit:minimum="4" spirit:maximum="512" spirit:rangeType="long">8</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>SUPPORTS_NARROW_BURST</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S00_AXI.SUPPORTS_NARROW_BURST" spirit:choiceRef="choice_pairs_ce1226b1">0</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>S00_AXI_RST</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_aresetn</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_RST.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>S00_AXI_CLK</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_aclk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_CLK.ASSOCIATED_BUSIF">S00_AXI</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_CLK.ASSOCIATED_RESET">s00_axi_aresetn</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:memoryMaps>
+    <spirit:memoryMap>
+      <spirit:name>S00_AXI</spirit:name>
+      <spirit:addressBlock>
+        <spirit:name>S00_AXI_reg</spirit:name>
+        <spirit:baseAddress spirit:format="long" spirit:resolve="user">0</spirit:baseAddress>
+        <spirit:range spirit:format="long">4096</spirit:range>
+        <spirit:width spirit:format="long">32</spirit:width>
+        <spirit:usage>register</spirit:usage>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>OFFSET_BASE_PARAM</spirit:name>
+            <spirit:value spirit:id="ADDRBLOCKPARAM_VALUE.S00_AXI.S00_AXI_REG.OFFSET_BASE_PARAM">C_S00_AXI_BASEADDR</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>OFFSET_HIGH_PARAM</spirit:name>
+            <spirit:value spirit:id="ADDRBLOCKPARAM_VALUE.S00_AXI.S00_AXI_REG.OFFSET_HIGH_PARAM">C_S00_AXI_HIGHADDR</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:addressBlock>
+    </spirit:memoryMap>
+  </spirit:memoryMaps>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_vhdlsynthesis</spirit:name>
+        <spirit:displayName>VHDL Synthesis</spirit:displayName>
+        <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>vhdl</spirit:language>
+        <spirit:modelName>ADC_controller_v1_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlsynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>7481a65a</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_vhdlbehavioralsimulation</spirit:name>
+        <spirit:displayName>VHDL Simulation</spirit:displayName>
+        <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>vhdl</spirit:language>
+        <spirit:modelName>ADC_controller_v1_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>7481a65a</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_softwaredriver</spirit:name>
+        <spirit:displayName>Software Driver</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:sw.driver</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_softwaredriver_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>a7de965a</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>0e5443b4</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>bd_tcl</spirit:name>
+        <spirit:displayName>Block Diagram</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:block.diagram</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>bd_tcl_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>16328387</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>MISO</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>clk_100</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>CS</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>SCLK</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_aclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_aresetn</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_awaddr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH&apos;)) - 1)">4</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_awprot</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_awvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_awready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_wdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_wstrb</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH&apos;)) / 8) - 1)">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_wvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_wready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_bresp</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_bvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_bready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_araddr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH&apos;)) - 1)">4</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_arprot</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_arvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_arready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_rdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_rresp</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_rvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_rready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
+        <spirit:name>C_S00_AXI_DATA_WIDTH</spirit:name>
+        <spirit:displayName>C S00 AXI DATA WIDTH</spirit:displayName>
+        <spirit:description>Width of S_AXI data bus</spirit:description>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH" spirit:order="3" spirit:rangeType="long">32</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_S00_AXI_ADDR_WIDTH</spirit:name>
+        <spirit:displayName>C S00 AXI ADDR WIDTH</spirit:displayName>
+        <spirit:description>Width of S_AXI address bus</spirit:description>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH" spirit:order="4" spirit:rangeType="long">5</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
+  </spirit:model>
+  <spirit:choices>
+    <spirit:choice>
+      <spirit:name>choice_list_6fc15197</spirit:name>
+      <spirit:enumeration>32</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_9d8b0d81</spirit:name>
+      <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
+      <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_pairs_ce1226b1</spirit:name>
+      <spirit:enumeration spirit:text="true">1</spirit:enumeration>
+      <spirit:enumeration spirit:text="false">0</spirit:enumeration>
+    </spirit:choice>
+  </spirit:choices>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/ADC_Controller.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/ADC_controller_v1_0_S00_AXI.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/ADC_controller_v1_0.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_ef052cc6</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/ADC_Controller.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/ADC_controller_v1_0_S00_AXI.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/ADC_controller_v1_0.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_softwaredriver_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>drivers/ADC_controller_v1_0/data/ADC_controller.mdd</spirit:name>
+        <spirit:userFileType>mdd</spirit:userFileType>
+        <spirit:userFileType>driver_mdd</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>drivers/ADC_controller_v1_0/data/ADC_controller.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>driver_tcl</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>drivers/ADC_controller_v1_0/src/Makefile</spirit:name>
+        <spirit:userFileType>driver_src</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>drivers/ADC_controller_v1_0/src/ADC_controller.h</spirit:name>
+        <spirit:fileType>cSource</spirit:fileType>
+        <spirit:userFileType>driver_src</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>drivers/ADC_controller_v1_0/src/ADC_controller.c</spirit:name>
+        <spirit:fileType>cSource</spirit:fileType>
+        <spirit:userFileType>driver_src</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>drivers/ADC_controller_v1_0/src/ADC_controller_selftest.c</spirit:name>
+        <spirit:fileType>cSource</spirit:fileType>
+        <spirit:userFileType>driver_src</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/ADC_controller_v1_0.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_0e5443b4</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>bd_tcl_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>bd/bd.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>My new AXI IP</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_DATA_WIDTH</spirit:name>
+      <spirit:displayName>C S00 AXI DATA WIDTH</spirit:displayName>
+      <spirit:description>Width of S_AXI data bus</spirit:description>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_DATA_WIDTH" spirit:choiceRef="choice_list_6fc15197" spirit:order="3">32</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_DATA_WIDTH">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_ADDR_WIDTH</spirit:name>
+      <spirit:displayName>C S00 AXI ADDR WIDTH</spirit:displayName>
+      <spirit:description>Width of S_AXI address bus</spirit:description>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_ADDR_WIDTH" spirit:order="4" spirit:rangeType="long">5</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_ADDR_WIDTH">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_BASEADDR</spirit:name>
+      <spirit:displayName>C S00 AXI BASEADDR</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_BASEADDR" spirit:order="5" spirit:bitStringLength="32">0xFFFFFFFF</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_BASEADDR">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_HIGHADDR</spirit:name>
+      <spirit:displayName>C S00 AXI HIGHADDR</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_HIGHADDR" spirit:order="6" spirit:bitStringLength="32">0x00000000</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_HIGHADDR">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">ADC_controller_v1_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Pre-Production">zynq</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>ADC_controller_v1.0</xilinx:displayName>
+      <xilinx:coreRevision>32</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2026-05-12T07:11:11Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c0bccb_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d16ca43_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@782cf7ed_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@625b182e_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10aab7e7_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c54efe9_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@318414e3_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@397e4d6a_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@662e8370_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48cc0ff2_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29848ed0_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9563543_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48375aef_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@344b0f8b_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f2babf5_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24a049ae_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40aa19cd_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fc043a_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29c8f124_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52f1b985_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7abc9b58_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c76eaac_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46e4f101_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1848b127_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37d05ca_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6cdc69da_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bb643e9_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@116e74d5_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24a07be8_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4da8cca8_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b52cdef_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c961b91_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68773f65_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9d8db47_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ceabc0d_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@348920c3_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fb3b3c8_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b3df71b_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4884ffd4_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73480a2b_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@509ffa0e_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21d4fd43_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@754717ba_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ef999b8_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@190868b7_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43acc9fc_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f5480a2_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39bc9c75_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5363a951_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3025c5a_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5933e11f_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4df34536_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15149f7_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73fda10f_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27860611_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5163fdce_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a118ca2_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2cbc652e_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d32a34d_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b6f45e1_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@328552df_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@399362a0_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4969e231_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14da9ad7_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69f207bb_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e254995_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@590cabfd_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62b49a68_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1bfe5f88_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f953012_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64ef732d_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6703856b_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@292c390c_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b7d36c4_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@148d39d5_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a8d3a55_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5742c510_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55025734_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ccffc2d_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f642da8_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48089d42_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a88f359_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ee3e651_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36b938db_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a0fb96_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1505fca6_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@698a4926_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12570c9e_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38b58ec0_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ed148e6_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@691d01d9_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fc88aec_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a7cc9bd_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61d69973_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@275889f3_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c0ceb98_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a6a3ac0_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30e8f0a2_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21a8d4bc_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3901e09a_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e123f51_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18f4184f_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@472fcc3_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6093e5f_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61dd6847_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@573227fa_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7630c281_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6533a417_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@411d095e_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@659672de_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fb6accf_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@107e3953_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e32400e_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78fa9df7_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3182ea24_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36b47fec_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@197a3cc6_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@93ce0ea_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b216210_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76864b66_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7881cfb0_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76ca8755_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6abfbb78_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d08d2a1_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b5513f5_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a985a7e_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1227650a_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cbde99d_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c7c5547_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6dfa5966_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a6eed93_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4cf3ad35_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@751ec587_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17457d41_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61b525f3_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30f9c05e_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2667edec_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@364668ce_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b8f4d2a_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32d6bda0_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b0212be_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15f9c09e_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fe1e935_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45e1c3ef_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@575b9d1_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3be31122_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b2fdf87_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fe376ac_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d4f1869_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34ad2042_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75b554ce_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79731e7b_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d5226a8_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26a0217c_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f3cd41b_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@fcb3f15_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a42b258_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@96ab056_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19696eeb_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@300921ed_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f065677_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@265d538f_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68b9f95e_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@720a82d1_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@666880b0_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63f5858d_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2143fccb_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64cf5157_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63adf2f0_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@219756b0_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35f02fc0_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4300fd33_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32423f73_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e8cc90d_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54e7bf7a_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45f2a5eb_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d41b3d_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66c55f15_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3201d228_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@132e047_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ca36c1d_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1edeedf1_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43019d88_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79c0623f_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@308ab64f_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27b89bdb_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@472bb50d_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30650c3a_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@eca332c_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50352fb9_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3beb0e91_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4659a2a4_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d73248d_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c9dd1d4_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@198560c0_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fcdd451_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b4b515_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@492a1c70_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4248ed30_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26f51709_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24b75d65_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f9d6b24_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c462470_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@422f3bb_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65f3db83_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bae20f6_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5923652a_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37d8bf13_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4401d1c4_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a0fbe9e_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bb98371_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6920a309_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d2e5e7a_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21d38cff_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@247ac5_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b778971_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@788f64d1_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1487ad6b_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1cff1cbe_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48738ad1_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@536cfebd_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28bceb9e_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ec42f61_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12769142_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@389e0869_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16348943_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1765d66c_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d94bffe_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66ee68c_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77dda87d_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c24027_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22b02f0c_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ee16dd_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9f999f9_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14bec21f_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50c8e6ca_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d80dad0_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fe77970_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@417b0d9_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74cec7c3_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52825b93_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3857ea42_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46b2bd6f_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4cb96def_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b4ee75d_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2422fa33_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15328515_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70c550fe_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@880997e_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3052a961_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d312bff_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74f3051_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e628463_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a8467c2_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f53bfc8_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21f41030_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78043f9b_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b1f05b0_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@126f6a7c_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30d257a4_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2caabd6b_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68f99afd_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53f37c2_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74a988ee_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bd0c308_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@627d8e3b_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37518443_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29c20391_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6344bb51_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d60e388_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47d2692a_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@499a089c_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63ddfbd7_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6dd7bcc9_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46d17f8f_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f886278_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74ffd340_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50115bd6_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@eeaa8e6_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@90b63a0_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f11eff1_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57bf46b6_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5522ba22_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66d4fff7_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@231c2a6d_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e2c11e1_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@781d0d8c_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6218448b_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f1948de_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a96ab2_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5db7fbbc_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ec90222_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fc72cae_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@617c9aeb_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39ab9645_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ef7a85f_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6771c1b0_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a0c74d5_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7eb27975_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@737cdd13_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6466f24f_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c93ecb3_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13d28522_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@447ca8ea_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@251b88a8_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b8d709_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4165e07c_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34a0f43f_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41efbaaf_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@405d50bf_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a9c7166_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ec421ab_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5dd92e96_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@737264d9_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4180188b_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e787e4a_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@290c2366_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cbcb3b9_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e69cdb0_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b51ec11_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@700b2259_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3810694e_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3be668e9_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@505dfada_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bd6aba6_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74f38436_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@465bb156_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@543ed59b_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e191819_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d85494c_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79c460bc_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51da7e8c_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38d2c3a5_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57b70e2b_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b623d40_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5befcafa_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3062eef6_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31f5fb35_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@300fc6b1_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1258d833_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53ee596b_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53b0b534_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c7e8d3f_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9fd0f67_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d88d108_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b29d0f2_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49252937_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41d1d994_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7847787d_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@172d7124_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2179da55_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ebc5692_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e196253_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@555266b3_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11c56420_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5eb58a01_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@440bd1d9_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d55309f_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25b0562f_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34dafec3_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6479579a_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d5ddc50_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37a6c0bd_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e3a596c_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68f56deb_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@512d9db8_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a5f4c34_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4abd41c2_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55134c8_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a914731_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5189f7e5_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@516adb0c_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70e8a880_ARCHIVE_LOCATION">c:/Users/j_nar/Downloads/Diseo_Electronico/ip_repo/ADC_controller_1.0</xilinx:tag>
+      </xilinx:tags>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2019.2</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="206b0a70"/>
+      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="d9b8d5fe"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="2744602f"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="2e811c89"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="52def396"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>
