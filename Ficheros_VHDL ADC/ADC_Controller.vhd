@@ -50,7 +50,7 @@ Port (
         
         clk_20  : out std_logic;
         
-        max : out std_logic_vector(31 downto 0); -- m·ximo
+        max : out std_logic_vector(31 downto 0); -- m√°ximo
         frec : out std_logic_vector(31 downto 0); -- frecuencia
         min : out std_logic_vector(31 downto 0); -- minimo
         
@@ -106,7 +106,7 @@ architecture Behavioral of ADC_Controller is
     signal conta_periodo: unsigned(15 downto 0) := (others => '0');
     signal registro_periodo: unsigned(15 downto 0) := (others => '0');
     
-    signal max_reg_current: unsigned(11 downto 0) := (others => '0'); -- Registro del m·ximo actual
+    signal max_reg_current: unsigned(11 downto 0) := (others => '0'); -- Registro del m√°ximo actual
     signal min_reg_current: unsigned(11 downto 0) := (others => '0');
     constant CRUCE_THRESHOLD: unsigned(11 downto 0) := to_unsigned( 2047, 12);
 
@@ -121,10 +121,10 @@ begin
                    "11" when e_act = BPORCH;
 
 
-    -- Conectar seÒal interna a salida fÌsica
+    -- Conectar se√±al interna a salida f√≠sica
     DRDY <= data_ready;
     Data_Out <= data_out_sg;
-    -- Asignar las seÒales internas a los puertos de salida
+    -- Asignar las se√±ales internas a los puertos de salida
 
     clk_20  <= s_clk_20;
     -- Prescaler
@@ -141,7 +141,7 @@ begin
         else                                 
             cuenta_5ticks <= cuenta_5ticks + 1;
             
-            -- Para que sea lo m·s parecido a una onda cuadrada:
+            -- Para que sea lo m√°s parecido a una onda cuadrada:
             -- 2 ticks en alto (20ns), 3 ticks en bajo (30ns) = 50ns total
             if cuenta_5ticks = 1 then 
                 s_clk_20 <= '0';
@@ -152,7 +152,7 @@ end process;
 
 clk_20 <= s_clk_20;
 
-    -- M¡QUINA DE ESTADOS 
+    -- M√ÅQUINA DE ESTADOS 
    FSM_P: process(clk_100, RESET)
     begin
     
@@ -261,7 +261,7 @@ clk_20 <= s_clk_20;
                     en_shift <= '0';
                     Data_ready <= '0';
                     
-                    -- TransiciÛn: Start = '1' --> FPORCH
+                    -- Transici√≥n: Start = '1' --> FPORCH
                     if sg_Start = '1' then
                         e_sig <= FPORCH;
                     end if;
@@ -275,9 +275,9 @@ clk_20 <= s_clk_20;
                     en_cnt <= '1';
                     en_shift <= '0';
                     Data_ready <= '0';
-                    -- CondiciÛn: cnt < 3 T100MHz
+                    -- Condici√≥n: cnt < 3 T100MHz
                     if cnt_sg = "10" then
-                        -- TransiciÛn: cnt = 3 --> SHIFTING
+                        -- Transici√≥n: cnt = 3 --> SHIFTING
                         e_sig <= SHIFTING;                       
                     end if;
 
@@ -290,10 +290,10 @@ clk_20 <= s_clk_20;
                     en_cnt <= '0';
                     en_shift <= '1';                   
                     Data_ready <= '0';
-                    -- LÛgica de "SCLK Activo" (usando el tick del prescaler)
+                    -- L√≥gica de "SCLK Activo" (usando el tick del prescaler)
 
 
-                    -- CondiciÛn de Salida del dibujo: cntData = 16 --> BPORCH
+                    -- Condici√≥n de Salida del dibujo: cntData = 16 --> BPORCH
                     if cntData = 16 then
                         e_sig <= BPORCH;                        
                     end if;
@@ -307,10 +307,10 @@ clk_20 <= s_clk_20;
 --                    sclk_int <= '1'; -- Deshabilitado
                     en_cnt <= '1';
                     en_shift <= '0';
-                    Data_ready     <= '1'; -- °Salida activa seg˙n tabla!
-                    -- CondiciÛn: cnt < 1 T100MHz
+                    Data_ready     <= '1'; -- ¬°Salida activa seg√∫n tabla!
+                    -- Condici√≥n: cnt < 1 T100MHz
                     if cnt_sg = "00" then
-                        -- TransiciÛn: cnt = 1 --> HOLD
+                        -- Transici√≥n: cnt = 1 --> HOLD
                         e_sig    <= HOLD;
                         data_out_sg <= shift_reg(11 downto 0);
                     end if;
@@ -326,7 +326,7 @@ data_out_uns <= unsigned(data_out_sg);
                 max_reg_current <= (others => '0');                
             elsif rising_edge(CLK_100) then
                 if data_ready = '1' and data_out_uns > max_reg_current then 
-                    max_reg_current <= data_out_uns;     -- M¡XIMO
+                    max_reg_current <= data_out_uns;     -- M√ÅXIMO
                 end if;                
             end if;
     end process;
@@ -356,10 +356,10 @@ FREQUENCIA: process(CLK_100, reset)
     MINIMO: process(CLK_100, reset)
         begin
             if reset = '0' then                
-                min_reg_current <= (others => '1'); -- Como siempre ser· > 0 la onda, se inicializa en vez de a 0 al valor m·ximo                 
+                min_reg_current <= (others => '1'); -- Como siempre ser√° > 0 la onda, se inicializa en vez de a 0 al valor m√°ximo                 
             elsif rising_edge(CLK_100) then
                 if data_ready = '1' and data_out_uns < min_reg_current then 
-                    min_reg_current <= data_out_uns;     -- MÕNIMO
+                    min_reg_current <= data_out_uns;     -- M√çNIMO
                 end if;                
             end if;
     end process;
