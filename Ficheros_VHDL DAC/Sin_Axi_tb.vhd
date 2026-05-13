@@ -27,7 +27,7 @@ entity Sin_Axi_tb is
 end Sin_Axi_tb;
 
 architecture Behavioral of Sin_Axi_tb is
-      -- Par·metros
+      -- Par√°metros
     constant ADDR_WIDTH : integer := 14;
     constant DATA_WIDTH : integer := 12;    
     
@@ -43,7 +43,7 @@ architecture Behavioral of Sin_Axi_tb is
            addr_wr : in STD_LOGIC_VECTOR (addr_width-1 downto 0));
         end component;
   
-    -- SeÒales locales
+    -- Se√±ales locales
     signal clk50_tb  : std_logic := '0';
     signal nRST_tb   : std_logic := '1';
     signal wr_en_tb  : std_logic := '0';
@@ -78,7 +78,7 @@ begin
     end process;
 
     -------------------------------------------------------------------------
-    -- SeÒal de reset
+    -- Se√±al de reset
     -------------------------------------------------------------------------
     rst_process : process
     begin
