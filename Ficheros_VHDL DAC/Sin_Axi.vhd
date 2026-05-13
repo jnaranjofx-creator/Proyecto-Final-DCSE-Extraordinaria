@@ -49,7 +49,7 @@ end Sin_Axi;
 
 architecture Behavioral of Sin_Axi is
 
-    -- Señales internas
+    -- SeÃ±ales internas
     signal START_sig   : std_logic;
     signal DONE_sig    : std_logic;
     signal addr_rd_sig : std_logic_vector(ADDR_WIDTH-1 downto 0);
