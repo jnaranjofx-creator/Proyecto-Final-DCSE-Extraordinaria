@@ -126,7 +126,7 @@ end process;
                         if nrst = '0' then 
                             reg <= (others => '0');
                             shiftcounter <= (others => '0');
-                            -- D1 <= '0'; -- Inicialización forzada de la salida
+                            -- D1 <= '0'; -- InicializaciÃ³n forzada de la salida
                         elsif rising_edge(clk_25) then
                             if loaddata = '1' then
                                 reg(15 downto 12) <= "0000";
