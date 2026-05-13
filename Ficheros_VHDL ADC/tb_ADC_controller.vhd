@@ -39,7 +39,7 @@ end tb_ADC_Controller;
 
 architecture Behavioral of tb_ADC_Controller is
 
-    -- 1. Declaramos tu diseño (El que acabamos de hacer)
+    -- 1. Declaramos tu diseÃ±o (El que acabamos de hacer)
     component ADC_Controller
     Port (
         clk_100      : in STD_LOGIC;
@@ -60,7 +60,7 @@ architecture Behavioral of tb_ADC_Controller is
 
 begin
 
-    -- 3. Conectamos los cables a tu diseño
+    -- 3. Conectamos los cables a tu diseÃ±o
     uut: ADC_Controller Port map (
         clk_100  => clk_100 , RESET => reset, MISO => miso, Start => start,
         CS => cs, SCLK => sclk, DRDY => drdy, Data_Out => data_out
@@ -82,7 +82,7 @@ begin
         wait until falling_edge(cs); 
         
         -- Preparamos el dato de 12 bits en un vector de 16 (rellenando ceros/ceros)
-        -- Ajusta según cómo lea tu protocolo (si los 12 bits son los primeros o últimos)
+        -- Ajusta segÃºn cÃ³mo lea tu protocolo (si los 12 bits son los primeros o Ãºltimos)
         v_vector_16 := "0000" & std_logic_vector(to_unsigned(v_dato_rampa, 12));
 
         -- Enviamos los 16 bits serializados por MISO
@@ -93,9 +93,9 @@ begin
         
         miso <= '0'; 
 
-        -- Lógica de la rampa: calculamos el valor para la PRÓXIMA vez que baje CS
+        -- LÃ³gica de la rampa: calculamos el valor para la PRÃ“XIMA vez que baje CS
         if v_subiendo then
-            v_dato_rampa := v_dato_rampa + 100; -- Incremento grande para ver cambios rápido
+            v_dato_rampa := v_dato_rampa + 100; -- Incremento grande para ver cambios rÃ¡pido
             if v_dato_rampa >= 4000 then v_subiendo := false; end if;
         else
             v_dato_rampa := v_dato_rampa - 100;
@@ -103,7 +103,7 @@ begin
         end if;
     end process;
 
-    -- 6. EL GUIÓN DE LA PRUEBA (Múltiples capturas para probar Max/Min/Frec)
+    -- 6. EL GUIÃ“N DE LA PRUEBA (MÃºltiples capturas para probar Max/Min/Frec)
     process
     begin
         -- Reset inicial
@@ -113,7 +113,7 @@ begin
         reset <= '1';
         wait for 100 ns;
 
-        -- Hacemos 20 capturas automáticas
+        -- Hacemos 20 capturas automÃ¡ticas
         for j in 1 to 20 loop
             start <= '1';
             wait for 20 ns;
@@ -124,7 +124,7 @@ begin
             wait for 200 ns; -- Pausa entre muestras
         end loop;
 
-        wait; -- Fin de la simulación
+        wait; -- Fin de la simulaciÃ³n
     end process;
 end Behavioral;
 
