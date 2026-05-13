@@ -43,7 +43,7 @@ entity Addr_Ctrl is
 end Addr_Ctrl;
 
 architecture Behavioral of Addr_Ctrl is
-    -- Señales internas
+    -- SeÃ±ales internas
     signal done_d   : std_logic ;  -- detector de flanco
     signal done_d_2  : std_logic ;  -- detector de flanco
     signal enCnt    : std_logic ;  -- pulso habilitador
@@ -85,7 +85,7 @@ begin
             count <= (others => '0');
         elsif rising_edge(clk50) then
             if enCnt = '1' then
-            if ini = '1' then -- Reinicio cíclico al final
+            if ini = '1' then -- Reinicio cÃ­clico al final
                     count <= (others => '0');
                 else
                     count <= count + 1; -- Incremento normal
